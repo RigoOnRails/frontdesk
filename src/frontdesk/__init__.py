@@ -1,2 +1,7 @@
-def main() -> None:
-    print("Hello from frontdesk!")
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get('/')
+def root():
+    return { 'Hello': 'world' }
